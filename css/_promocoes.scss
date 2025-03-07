@@ -1,0 +1,52 @@
+@use '../variable/variable';
+.promocao{
+   width: 80%;
+   margin: 0 auto;
+   
+  
+    .promocao__titulo{
+       
+        font-family: variable.$fonte-secundaria;
+        font-weight: 800;
+        font-size: 39px;
+        line-height: 46.8px;
+        color: variable.$cor-titulo;
+        margin-bottom: 2rem;
+
+
+    }
+    .promocao__list{
+    
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+      
+        list-style-type: none;
+        gap: 2rem;
+      
+    .promocao__list_itens{
+        box-shadow: 0px 4px 24px 0px #7B7B7B26;
+
+    }
+    .promocao__list_itens > img{
+       object-fit: contain;
+       width: 100%;
+       height: 80%;
+    }
+    .promocao__list_item{
+       height: 20%;
+       padding: 1rem;
+       font-family: variable.$fonte-secundaria;
+       background-color: variable.$cor-Cinza-claro;
+       
+
+    }
+    .promocao__list_item > p {
+        padding: 1rem;
+    }
+    .promocao__list_item-texto{
+        margin-bottom: 2rem;
+       
+    }
+}
+    
+}

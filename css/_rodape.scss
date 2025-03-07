@@ -1,0 +1,106 @@
+@use '../variable/variable';
+
+.rodape{
+    padding: 60px 12%;
+    background-color: variable.$cor-cinza-escuro;
+     color: white;
+}
+.rodape__coluna_titulo {
+    font-family: variable.$fonte-primaria;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.rodape__coluna_logo > img {
+    width: 79.61px;
+    height: 48px;
+
+}
+.rodape__coluna_logo_texto{
+    font-family: variable.$fonte-primaria;
+    font-weight: 400;
+    font-size: 1rem;
+    color: #8FFF24;
+    padding-top: 1rem;
+    line-height: 19.3px;
+}
+.rodape__coluna_list {
+    list-style-type: none;
+    color: white;
+    font-family: variable.$fonte-primaria;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+.rodape__coluna_list_item{
+    margin-bottom: 8px;
+}
+.rodape__coluna_list_item > a{
+    text-decoration: none;
+    color: white;
+}
+.rodape__linha{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    justify-content: space-between;
+    
+    padding: 3rem 2rem;
+    color: white;
+    
+}
+.rodape__linha:last-child{
+    border-top: 2px solid #8FFF24;
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    justify-content: space-between;
+ 
+}
+.rodape__coluna_list-cartao{
+    display: inline-grid;
+    grid-template-columns: repeat(5,auto);
+    gap: 1rem;
+    list-style-type: none;
+
+}
+.rodape__coluna_list-redes-sociais{
+    display: inline-grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 1rem;
+    list-style-type: none;
+}
+@media screen and (max-width:768px ) {
+    .rodape__linha:first-child{
+        display: grid;
+        grid-template-areas: 
+        "logo logo logo"
+        "funcionamento institucional informacoes";
+        justify-content: space-between;
+        column-gap: 68px;
+
+    }
+    .rodape__linha:first-child .rodape__coluna_logo{
+        grid-area: logo;
+        text-align: center;
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+        border-bottom: 1.5px solid variable.$cor-verde;
+    }
+    .rodape__linha:first-child .rodape__coluna:nth-child(2) {
+        grid-area: funcionamento;
+        margin-bottom: 24px;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(3) {
+            grid-area: institucional;
+    }
+
+    .rodape__linha:first-child .rodape__coluna:nth-child(4) {
+            grid-area: informacoes;
+    }
+    .rodape__linha:last-child {
+        border-top: none;
+        padding-top: 32px;
+}
+    
+}
